@@ -1,0 +1,424 @@
+Setting environment for using XAMPP for Windows.
+Choud@LAPTOP-OSJOS8HR c:\xampp
+# mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 16
+Server version: 10.4.28-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| bank               |
+| bank_application   |
+| information_schema |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| python11am         |
+| test               |
++--------------------+
+8 rows in set (0.031 sec)
+
+MariaDB [(none)]> drop bank_application;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'bank_application' at line 1
+MariaDB [(none)]> use  bank_application;
+Database changed
+MariaDB [bank_application]> Drop bank_application;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'bank_application' at line 1
+MariaDB [bank_application]> Drop 'bank_application';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''bank_application'' at line 1
+MariaDB [bank_application]> Drop database bank_application;
+Query OK, 0 rows affected (0.068 sec)
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| bank               |
+| information_schema |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| python11am         |
+| test               |
++--------------------+
+7 rows in set (0.004 sec)
+
+MariaDB [(none)]> use bank;
+Database changed
+MariaDB [bank]> create table bank_application (acc_no int(10),user_name varchar(100),pwd varchar(100));
+Query OK, 0 rows affected (0.058 sec)
+
+MariaDB [bank]> desc bank_application;
++-----------+--------------+------+-----+---------+-------+
+| Field     | Type         | Null | Key | Default | Extra |
++-----------+--------------+------+-----+---------+-------+
+| acc_no    | int(10)      | YES  |     | NULL    |       |
+| user_name | varchar(100) | YES  |     | NULL    |       |
+| pwd       | varchar(100) | YES  |     | NULL    |       |
++-----------+--------------+------+-----+---------+-------+
+3 rows in set (0.061 sec)
+
+MariaDB [bank]> inset into bank_application values(1,'aman','aman@123');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'inset into bank_application values(1,'aman','aman@123')' at line 1
+MariaDB [bank]> insert into bank_application values(1,'aman','aman@123');
+Query OK, 1 row affected (0.094 sec)
+
+MariaDB [bank]> show tables;
++------------------+
+| Tables_in_bank   |
++------------------+
+| bank_application |
++------------------+
+1 row in set (0.001 sec)
+
+MariaDB [bank]> select * from bank_application;
++--------+-----------+----------+
+| acc_no | user_name | pwd      |
++--------+-----------+----------+
+|      1 | aman      | aman@123 |
++--------+-----------+----------+
+1 row in set (0.000 sec)
+
+MariaDB [bank]> insert into bank_application values(2,'harsha','harsha@123',(3,'alfez','alfez@123'));
+ERROR 1241 (21000): Operand should contain 1 column(s)
+MariaDB [bank]> insert into bank_application values(2,'harsha','harsha@123'),(3,'alfez','alfez@123');
+Query OK, 2 rows affected (0.043 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+MariaDB [bank]> select * from bank_application;
++--------+-----------+------------+
+| acc_no | user_name | pwd        |
++--------+-----------+------------+
+|      1 | aman      | aman@123   |
+|      2 | harsha    | harsha@123 |
+|      3 | alfez     | alfez@123  |
++--------+-----------+------------+
+3 rows in set (0.000 sec)
+
+MariaDB [bank]>
+MariaDB [bank]>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Setting environment for using XAMPP for Windows.
+Choud@LAPTOP-OSJOS8HR c:\xampp
+# mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 16
+Server version: 10.4.28-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| bank               |
+| bank_application   |
+| information_schema |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| python11am         |
+| test               |
++--------------------+
+8 rows in set (0.031 sec)
+
+MariaDB [(none)]> drop bank_application;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'bank_application' at line 1
+MariaDB [(none)]> use  bank_application;
+Database changed
+MariaDB [bank_application]> Drop bank_application;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'bank_application' at line 1
+MariaDB [bank_application]> Drop 'bank_application';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''bank_application'' at line 1
+MariaDB [bank_application]> Drop database bank_application;
+Query OK, 0 rows affected (0.068 sec)
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| bank               |
+| information_schema |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| python11am         |
+| test               |
++--------------------+
+7 rows in set (0.004 sec)
+
+MariaDB [(none)]> use bank;
+Database changed
+MariaDB [bank]> create table bank_application (acc_no int(10),user_name varchar(100),pwd varchar(100));
+Query OK, 0 rows affected (0.058 sec)
+
+MariaDB [bank]> desc bank_application;
++-----------+--------------+------+-----+---------+-------+
+| Field     | Type         | Null | Key | Default | Extra |
++-----------+--------------+------+-----+---------+-------+
+| acc_no    | int(10)      | YES  |     | NULL    |       |
+| user_name | varchar(100) | YES  |     | NULL    |       |
+| pwd       | varchar(100) | YES  |     | NULL    |       |
++-----------+--------------+------+-----+---------+-------+
+3 rows in set (0.061 sec)
+
+MariaDB [bank]> inset into bank_application values(1,'aman','aman@123');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'inset into bank_application values(1,'aman','aman@123')' at line 1
+MariaDB [bank]> insert into bank_application values(1,'aman','aman@123');
+Query OK, 1 row affected (0.094 sec)
+
+MariaDB [bank]> show tables;
++------------------+
+| Tables_in_bank   |
++------------------+
+| bank_application |
++------------------+
+1 row in set (0.001 sec)
+
+MariaDB [bank]> select * from bank_application;
++--------+-----------+----------+
+| acc_no | user_name | pwd      |
++--------+-----------+----------+
+|      1 | aman      | aman@123 |
++--------+-----------+----------+
+1 row in set (0.000 sec)
+
+MariaDB [bank]> insert into bank_application values(2,'harsha','harsha@123',(3,'alfez','alfez@123'));
+ERROR 1241 (21000): Operand should contain 1 column(s)
+MariaDB [bank]> insert into bank_application values(2,'harsha','harsha@123'),(3,'alfez','alfez@123');
+Query OK, 2 rows affected (0.043 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+MariaDB [bank]> select * from bank_application;
++--------+-----------+------------+
+| acc_no | user_name | pwd        |
++--------+-----------+------------+
+|      1 | aman      | aman@123   |
+|      2 | harsha    | harsha@123 |
+|      3 | alfez     | alfez@123  |
++--------+-----------+------------+
+3 rows in set (0.000 sec)
+
+MariaDB [bank]>
+MariaDB [bank]>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
